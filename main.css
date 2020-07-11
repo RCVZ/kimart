@@ -127,18 +127,24 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  background-color: #fcfcfc;
 }
 
-.main {
-  flex: 1 1 100%;
+img.main {
+  height: auto;
+  max-width: 800px;
 }
 
-.side {
+img.side {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 25px;
+  bottom: 25px;
+  width: 200px;
+  height: auto;
 }
 
 .button-bar {
@@ -148,5 +154,16 @@ main {
 a > img {
   width: auto;
   height: 60px;
-  margin: 20px;
+  margin: 25px;
+}
+@media only screen and (max-width: 600px) {
+  img.main {
+    margin: -200px 0;
+  }
+  img.side {
+    order: 3;
+    position: relative;
+    width: 200px;
+    height: auto;
+  }
 }
