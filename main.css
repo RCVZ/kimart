@@ -142,28 +142,34 @@ img.main {
 img.side {
   position: absolute;
   left: 25px;
-  bottom: 25px;
+  bottom: 50px;
   width: 200px;
   height: auto;
 }
 
 .button-bar {
   display: flex;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  justify-content: space-between;
 }
 
 a > img {
   width: auto;
   height: 60px;
-  margin: 25px;
+  margin: 25px 0;
 }
 @media only screen and (max-width: 600px) {
   img.main {
-    margin: -200px 0;
+    /* margin: -200px 0; */
+    max-width: 100%;
   }
   img.side {
     order: 3;
     position: relative;
     width: 200px;
     height: auto;
+    left: 0;
   }
 }
